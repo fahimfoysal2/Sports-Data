@@ -20,8 +20,18 @@ class MylineController extends Controller
             ->acceptJson()
             ->get('http://35.175.135.183/api/sportsdata/current_lines/nfl');
 
-        $datas = json_decode($request->getBody(), true);
+        $nfl = json_decode($request->getBody(), true);
 
-        return view('myline', array("datas" => $datas));
+        $request = Http::withToken($response["access_token"])
+            ->acceptJson()
+            ->get('http://35.175.135.183/api/sportsdata/current_lines/nhl');
+
+        $nba = json_decode($request->getBody(), true);
+
+        $data = [];
+        if (array_key_exists("sports", $nfl['data']) && count($nfl['data']['sports']) != 0) array_push($data, $nfl);
+        if (array_key_exists("sports", $nba['data']) && count($nba['data']['sports']) != 0) array_push($data, $nba);
+
+        return view('myline', compact("data"));
     }
 }
