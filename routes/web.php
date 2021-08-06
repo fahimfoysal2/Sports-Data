@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MyfinalController;
+use App\Http\Controllers\MylineController;
+use App\Http\Controllers\MyscoreController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +22,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\WelcomeController::class, 'list'])->name('welcome');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/mylines', [App\Http\Controllers\MylineController::class, 'list'])->name('myline');
-Route::get('/myscore', [App\Http\Controllers\MyscoreController::class, 'list'])->name('myscore');
-Route::get('/myfinal', [App\Http\Controllers\MyfinalController::class, 'list'])->name('myfinal');
+Route::get('/', [WelcomeController::class, 'list'])->name('welcome');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/mylines', [MylineController::class, 'list'])->name('myline');
+Route::get('/myscore', [MyscoreController::class, 'list'])->name('myscore');
+Route::get('/myfinal', [MyfinalController::class, 'list'])->name('myfinal');
 
