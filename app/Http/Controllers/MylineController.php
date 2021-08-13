@@ -24,7 +24,7 @@ class MylineController extends Controller
 
         $request = Http::withToken($response["access_token"])
             ->acceptJson()
-            ->get('http://35.175.135.183/api/sportsdata/current_lines/nhl');
+            ->get('http://35.175.135.183/api/sportsdata/current_lines/nba');
 
         $nba = json_decode($request->getBody(), true);
 
