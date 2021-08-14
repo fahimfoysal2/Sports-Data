@@ -1,22 +1,7 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+@extends('layouts.app')
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'SportsData') }}</title>
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
-    <!-- Styles -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-</head>
-<body class="" style="background-color:#EDEFF4">
-<div id="">
-    {{-- navbar --}}
+@section('content')
+
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
@@ -59,8 +44,5 @@
             </div>
         </div>
     </nav>
-    {{-- navbar --}}
-</div>
-@yield('content')
-</body>
-</html>
+
+@endsection

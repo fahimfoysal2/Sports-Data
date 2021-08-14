@@ -31,4 +31,9 @@ class MyfinalController extends Controller
         $datas = json_decode($request->getBody(), true);
         return view('myfinal', array("datas" => $datas), array("leagues" => $leagues));
     }
+
+    public function test()
+    {
+        return view('component_test');
+    }
 }
