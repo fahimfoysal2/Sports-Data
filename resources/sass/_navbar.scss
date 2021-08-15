@@ -1,5 +1,18 @@
-.nav-link{
-    &:hover{
+.nav-link {
+    &:hover {
         color: darkred !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        flex-direction: row;
+        gap: 20px;
+
+        .nav-item {
+            .active {
+                color: darkred !important;
+                border-bottom: 1.5px solid darkred;            }
+        }
     }
 }

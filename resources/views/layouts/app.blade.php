@@ -14,53 +14,60 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
-<body class="" style="background-color:#EDEFF4">
-<div id="">
-    {{-- navbar --}}
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="#"><h2>Sports Data</h2></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
-                aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body>
+{{-- navbar --}}
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white py-4">
+    <a class="navbar-brand" href="#">Sports Data</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
+            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerMenu">
-            <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ Route('welcome') }}">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ Route('myline') }}">My Line</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{Route('myscore')}}">My Scores</a>
-                </li>
+    <div class="collapse navbar-collapse" id="navbarTogglerMenu">
+        <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('welcome') ? 'active' : '' }}"
+                   href="{{ Route('welcome') }}">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('myline') ? 'active' : '' }}" href="{{ Route('myline') }}">My
+                    Line</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('myscore') ? 'active' : '' }}" href="{{Route('myscore')}}">My
+                    Scores</a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{Route('myfinal')}}">My Finals</a>
-                </li>
-            </ul>
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('myfinal') ? 'active' : '' }}" href="{{Route('myfinal')}}">My
+                    Finals</a>
+            </li>
+        </ul>
 
-            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                @auth
-                    <a href="{{ route('welcome') }}" class="text-sm text-gray-700 underline">Home</a>
-                @else
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}"
-                           class="btn btn-register text-sm">Join</a>
-                    @endif
+        <div>
+            @auth
+                <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                    @csrf
+                    <button type="submit" class="btn btn-register text-sm">Logout</button>
+                </form>
+            @else
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}"
+                       class="btn btn-register text-sm">Join</a>
+                @endif
 
-                    <a href="{{ route('login') }}" class="ml-4 text-sm text-gray-700 underline">Log in</a>
-                @endauth
+                <a href="{{ route('login') }}" class="ml-4 text-sm text-gray-700 underline">Log in</a>
+            @endauth
 
-                <a class="ml-4 text-sm text-gray-700 underline" href="#">HELP <span class="sr-only">(current)</span></a>
-                <a class="ml-4 text-sm text-gray-700 underline" href="#">NEWS</a>
-                <a class="ml-4 text-sm text-gray-700 underline" href="#">CONTACTS</a>
-            </div>
+            <a class="ml-4 text-sm text-gray-700 underline" href="#">HELP <span class="sr-only">(current)</span></a>
+            <a class="ml-4 text-sm text-gray-700 underline" href="#">NEWS</a>
+            <a class="ml-4 text-sm text-gray-700 underline" href="#">CONTACTS</a>
         </div>
-    </nav>
-    {{-- navbar --}}
-</div>
-@yield('content')
+    </div>
+</nav>
+{{-- navbar --}}
+<main role="main">
+    @yield('content')
+</main>
 </body>
 </html>
