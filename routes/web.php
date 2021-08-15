@@ -28,3 +28,5 @@ Route::get('/mylines', [MylineController::class, 'list'])->name('myline');
 Route::get('/myscore', [MyscoreController::class, 'list'])->name('myscore');
 Route::get('/myfinal', [MyfinalController::class, 'list'])->name('myfinal');
 
+Route::get('/test', [MyfinalController::class, 'test']);
+

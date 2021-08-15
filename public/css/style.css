@@ -1,36 +1,42 @@
-.container{
+.container {
     width: 100% !important;
     max-width: 100% !important;
 }
-.col-md-12{
+
+.col-md-12 {
     padding-right: 0 !important;
 }
-a:hover{
-    text-decoration: none!important;
+
+a:hover {
+    text-decoration: none !important;
 }
-#middlebar{
+
+#middlebar {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: #383838 !important;
 }
-#topbar,#bottombar{
-    background-color: #2A2A2A !important;    
+
+#topbar, #bottombar {
+    background-color: #2A2A2A !important;
 }
-#middlebar,#topbar,#bottombar{
+
+#middlebar, #topbar, #bottombar {
     padding-left: 100px;
     padding-right: 100px;
     z-index: 2;
 }
-#banner{
+
+#banner {
     background: url('../image/banner.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 200px 0;
 }
-#banner::before{
 
-    content: ""; 
+#banner::before {
+    content: "";
     position: absolute;
     top: 230px;
     left: 0;
@@ -40,48 +46,70 @@ a:hover{
     height: 100%;
     background-color: black;
     opacity: .3;
-    
 }
-.section{
+
+.section {
     padding: 50px 0;
 }
-.nav-link{
-    font-size: 15px !important;
+
+.navbar {
+    text-transform: uppercase;
+    /*position: sticky;*/
 }
-.nav-tabs{
+
+.nav-link {
+    font-size: 17px !important;
+    color: #000000 !important;
+}
+
+.navbar-brand {
+    font-size: 1.4rem !important;
+    font-weight: bolder;
+    color: darkred !important;
+}
+
+.nav-tabs {
     padding: 0 10px;
 }
-.nav-tab a:hover{
+
+.nav-tab a:hover {
     background-color: #000;
     color: #fff;
 }
-.nav-tabs .nav-link.active{
+
+.nav-tabs .nav-link.active {
     color: white;
     background-color: #861717;
     border-color: #861717 #861717 #861717;
 }
-a:hover{
+
+a:hover {
     color: #861717;
 }
+
 #nav-tab a {
     color: #000;
 }
-#nav-tab a.active{
+
+#nav-tab a.active {
     color: #fff;
 }
-.sports-info{
+
+.sports-info {
     display: block;
-    
+
     padding: 15px 28px;
     color: #fff;
     background-color: #2a2a2a;
 }
-.sports-text{
+
+.sports-text {
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
-.sports-tab .nav-item.active::after{
+
+.sports-tab .nav-item.active::after {
     content: '';
     position: absolute;
     display: block;
@@ -89,107 +117,109 @@ a:hover{
     width: 0;
     top: 85px;
     height: 0;
-    transform:translateX(40px);
-    border-style: solid;    
+    transform: translateX(40px);
+    border-style: solid;
     border-width: 0 6px 6px 6px;
     border-color: transparent transparent #2a2a2a transparent;
 }
-.sports-tab .nav-item.active{
+
+.sports-tab .nav-item.active {
     font-weight: bold;
 
 }
+
 .sport-table-header {
     margin-top: 50px;
-	padding: 12px 23px 8px 23px;
-	font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-	font-size: 14px;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: #fff;
-	background-color: #616161;
-   
+    padding: 12px 23px 8px 23px;
+    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #616161;
+
 }
 
 .heading-component + .sport-table-header {
-	margin-top: 30px;
+    margin-top: 30px;
 }
 
 .sport-table {
-	background-color: #fff;
+    background-color: #fff;
 }
 
 .sport-table-tr {
-	padding: 11px 15px;
-	border-left: 1px solid #e1e1e1;
-	border-right: 1px solid #e1e1e1;
-	border-bottom: 1px solid #e1e1e1;
+    padding: 11px 15px;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
 }
 
 .sport-table-tr + .sport-table-tr {
-	border-top: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
 }
 
 .sport-table-icon {
-	text-align: right;
+    text-align: right;
 }
 
 .sport-table-icon .sprite {
-	margin-left: auto;
-	margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .sport-table-title {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
 }
 
 .sport-table-title-item {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .sport-table-title-item-right {
-	align-items: center;
+    align-items: center;
 }
 
 .sport-table-title-team, .sport-table-title-score {
-	font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.2;
+    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
 }
 
 .sport-table-title-team {
-	font-weight: 500;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-	color: #151515;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #151515;
 }
 
 .sport-table-title-team + .sport-table-title-team {
-	margin-top: 5px;
+    margin-top: 5px;
 }
 
 .sport-table-title-score {
-	font-weight: 400;
-	letter-spacing: 0.1em;
-	color: #151515;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #151515;
 }
 
 .sport-table-title-score span {
-	margin-left: 12px;
+    margin-left: 12px;
 }
 
 .sport-table-title-score span:nth-last-child(1) {
-	margin-left: 20px;
-	color: #861717;
+    margin-left: 20px;
+    color: #861717;
 }
 
 .sport-table-wager {
-	display: flex;
-	justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .sport-table-wager-button {
@@ -197,36 +227,36 @@ a:hover{
     margin-right: 1px;
     flex-basis: 48%;
     max-width: 48%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 7px;
-	border-radius: 5px;
-	font-size: 12px;
-	letter-spacing: 0.025em;
-	text-align: center;
-	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 12px;
+    letter-spacing: 0.025em;
+    text-align: center;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .sport-table-wager-button-count {
-	font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-	font-weight: 600;
+    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 600;
 }
 
 .sport-table-wager-button span {
-	display: block;
-	line-height: 1.2;
+    display: block;
+    line-height: 1.2;
 }
 
 .sport-table-wager-button, .sport-table-wager-button:focus, .sport-table-wager-button:active {
-	color: #151515;
-	background-color: #eaecee;
+    color: #151515;
+    background-color: #eaecee;
 }
 
 .sport-table-wager-button:hover, .sport-table-wager-button.active {
-	color: #fff;
-	background-color: #861717;
+    color: #fff;
+    background-color: #861717;
 }
 
 /* * + .sport-table-wager-button {
@@ -234,45 +264,48 @@ a:hover{
 } */
 
 .sport-table-bonus {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sport-table-bonus-count {
-	font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-	font-size: 14px;
-	font-weight: 500;
-	letter-spacing: 0.05em;
-	color: #151515;
+    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #151515;
 }
 
 .sport-table-bonus-icon {
-	display: flex;
-	font-size: 20px;
-	color: #9b9b9b;
+    display: flex;
+    font-size: 20px;
+    color: #9b9b9b;
 }
 
-.heading-component{
+.heading-component {
     padding-top: 20px;
     /* border-bottom: 1px solid #d7d7d7; */
     padding-bottom: 20px;
 }
-.heading-component-inner{
+
+.heading-component-inner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin-left: -15px;
-    
+
 }
-.heading-component-title{
+
+.heading-component-title {
     position: relative;
     display: inline-block;
     padding-left: 20px;
     line-height: 26px;
 }
-.heading-component-title::before{
+
+.heading-component-title::before {
     content: '';
     position: absolute;
     top: 3px;
@@ -281,7 +314,8 @@ a:hover{
     border-left: 4px solid #861717;
     pointer-events: auto;
 }
-.sport-table-header{
+
+.sport-table-header {
     padding: 12px 23px 8px 23px;
     font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 14px;
@@ -290,6 +324,7 @@ a:hover{
     color: #fff;
     background-color: #616161;
 }
-.row-15 > *{
+
+.row-15 > * {
     margin-bottom: 15px;
 }

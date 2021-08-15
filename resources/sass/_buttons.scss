@@ -1,0 +1,13 @@
+@import './variables';
+
+.btn-register {
+    color: white !important;
+    background-color: darkred !important;
+    border-color: darkred !important;
+    padding: 0.2rem .8rem !important;
+
+    &:hover {
+        background-color: $darkred-hover !important;
+        border-color: $darkred-hover !important;
+    }
+}

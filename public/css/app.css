@@ -1,4 +1,19 @@
 @charset "UTF-8";
+.btn-register {
+  color: white !important;
+  background-color: darkred !important;
+  border-color: darkred !important;
+  padding: 0.2rem 0.8rem !important;
+}
+.btn-register:hover {
+  background-color: rgba(182, 0, 0, 0.91) !important;
+  border-color: rgba(182, 0, 0, 0.91) !important;
+}
+
+.nav-link:hover {
+  color: darkred !important;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
