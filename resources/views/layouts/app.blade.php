@@ -17,7 +17,7 @@
 <body>
 {{-- navbar --}}
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white py-4">
-    <a class="navbar-brand" href="#">Sports Data</a>
+    <a class="navbar-brand" href="/">Sports Data</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
             aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -67,6 +67,9 @@
 </nav>
 {{-- navbar --}}
 <main role="main">
+    <div id="vue-app">
+        <sports-list></sports-list>
+    </div>
     @yield('content')
 </main>
 </body>

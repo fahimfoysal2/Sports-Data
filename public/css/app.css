@@ -10,6 +10,10 @@
   border-color: rgba(182, 0, 0, 0.91) !important;
 }
 
+.navbar {
+  box-shadow: 0 15px 10px -15px #736c6ca1;
+}
+
 .nav-link:hover {
   color: darkred !important;
 }

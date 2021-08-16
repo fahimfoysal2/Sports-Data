@@ -1,10 +1,10 @@
 <template>
-    <div>Hello, Example Component!</div>
+    <h4>Sports List from Api</h4>
 </template>
 
 <script>
 export default {
-    name: "Sport"
+    name: "SportsList"
 }
 </script>
 
