@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Http;
 
 class MyfinalController extends Controller
 {
-    //
     public function list()
     {
         $response = Http::post('http://35.175.135.183/oauth/token', [
